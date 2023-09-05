@@ -7,8 +7,8 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
-app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="../templates")
+app.mount("/static", StaticFiles(directory="../static"), name="static")
 
 
 def https_url_for(request: Request, name: str, **path_params: Any) -> str:
